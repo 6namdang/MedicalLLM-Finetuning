@@ -1,22 +1,39 @@
-![image](https://github.com/user-attachments/assets/1793e27d-8a5b-48d6-a2cd-727d7a72ca25)![image](https://github.com/user-attachments/assets/63a3c766-a73c-40dd-a93c-016d08c12ed5)# MedicalLLM-Finetuning
-Improvise and fine-tune an LLM model again GPT-3.5-turbo using a medical dataset
+MedicalLLM-Finetuning
 
-Introduction:
-The reason why I wanted to start this project is because I want to understand how LLM works under the hood, as well as how can I improve the accuracy of the model when compare it with different model.
-This medical dataset includes medical specialty and reports of it. For example, a specialty such as Cardiovascular / Pulmonary will have a report like so:
-2-D M-MODE: , ,1.  Left atrial enlargement with left atrial diameter of 4.7 cm.,2.  Normal size right and left ventricle.,3.  Normal LV systolic function with left ventricular ejection fraction of 51%.,4.  Normal LV diastolic function.,5.  No pericardial effusion.,6.  Normal morphology of aortic valve, mitral valve, tricuspid valve, and pulmonary valve.,7.  PA systolic pressure is 36 mmHg.,DOPPLER: , ,1.  Mild mitral and tricuspid regurgitation.,2.  Trace aortic and pulmonary regurgitation.
+Improvise and fine-tune an LLM model based on GPT-3.5-turbo using a medical dataset.
 
-#Data preprocessing:
+Introduction
+I started this project to gain a deeper understanding of how Large Language Models (LLMs) work and how fine-tuning them on specialized datasets can improve accuracy. My goal is to compare the performance of different models and explore how fine-tuning on a medical dataset can help improve the model's accuracy in understanding medical terminology and reports.
+
+The dataset includes medical specialties along with related reports. For example, a specialty such as Cardiovascular / Pulmonary might have a report like the following:
+
+2-D M-MODE: 
+1. Left atrial enlargement with left atrial diameter of 4.7 cm.
+2. Normal size right and left ventricle.
+3. Normal LV systolic function with left ventricular ejection fraction of 51%.
+4. Normal LV diastolic function.
+5. No pericardial effusion.
+6. Normal morphology of aortic valve, mitral valve, tricuspid valve, and pulmonary valve.
+7. PA systolic pressure is 36 mmHg.
+
+DOPPLER: 
+1. Mild mitral and tricuspid regurgitation.
+2. Trace aortic and pulmonary regurgitation.
+
+Data preprocessing:
 I sample a fixed amount of dataset for my train/test/val instead of using stratified random sample because I do not have enough funds to train via gpt-3.5 model.
 
-#Data formatting:
+Data formatting:
 Tokenize the report column annd format data into chatbased which include system, user and assistant. 
 ![image](https://github.com/user-attachments/assets/632c5ac2-72d6-464c-af43-3088ef7ede99)
 
 
-#Finetuning
+Finetuning
+
 I implement gpt-3.5 turbo:
 <img width="493" alt="image" src="https://github.com/user-attachments/assets/09a97290-6291-43a5-adc0-4d4ed8dad8f1">
+
+
 GPT-3.5 Turbo is built upon the transformer model, which consists of the following key components:
 
 Encoder-Decoder Architecture (used in some transformer models):
@@ -40,9 +57,14 @@ Autoregressive Language Model:
 
 GPT-3.5 Turbo is an autoregressive model, meaning it generates text one token at a time and uses previously generated tokens as part of the input for generating the next token. This enables it to create coherent, contextually relevant text.
 
-#Result:
+Result:
+
 <img width="365" alt="image" src="https://github.com/user-attachments/assets/2094a2f1-3189-49e6-b44f-41c206b2a595">
-Compare to gpt-3.5-turbo, my model perform 20% better. This is the proof:
+
+
+Compare to gpt-3.5-turbo, my model perform 20% better:
+
+
 ![image](https://github.com/user-attachments/assets/a4c0342c-faf9-4fd7-bd19-c458dfa72fc3)
 
 
