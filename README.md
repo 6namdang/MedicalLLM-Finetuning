@@ -2,7 +2,6 @@ MedicalLLM-Finetuning
 
 Improvise and fine-tune an LLM model based on GPT-3.5-turbo using a medical dataset.
 
-Introduction
 I started this project to gain a deeper understanding of how Large Language Models (LLMs) work and how fine-tuning them on specialized datasets can improve accuracy. My goal is to compare the performance of different models and explore how fine-tuning on a medical dataset can help improve the model's accuracy in understanding medical terminology and reports.
 
 The dataset includes medical specialties along with related reports. For example, a specialty such as Cardiovascular / Pulmonary might have a report like the following:
