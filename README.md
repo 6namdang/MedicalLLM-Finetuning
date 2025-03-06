@@ -61,7 +61,7 @@ Result:
 <img width="365" alt="image" src="https://github.com/user-attachments/assets/2094a2f1-3189-49e6-b44f-41c206b2a595">
 
 
-Compare to gpt-3.5-turbo, my model perform 20% better:
+The model perform 20% better after fine-tunning round.
 
 
 ![image](https://github.com/user-attachments/assets/a4c0342c-faf9-4fd7-bd19-c458dfa72fc3)
